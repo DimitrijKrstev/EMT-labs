@@ -21,12 +21,7 @@ public class AccommodationController {
 
     @PutMapping("/add")
     public Accommodation addAccommodation(AccommodationDto accommodationDto){
-        return accommodationService.addAccommodation(
-                accommodationDto.getName(),
-                accommodationDto.getCategory(),
-                accommodationDto.getHostId(),
-                accommodationDto.getNumRooms()
-        );
+        return accommodationService.addAccommodation(accommodationDto);
     }
 
     @DeleteMapping("/delete/{id}")
@@ -36,13 +31,7 @@ public class AccommodationController {
 
     @PutMapping("/edit/{id}")
     public Accommodation editAccommodation(@PathVariable Long id, AccommodationDto accommodationDto){
-        return accommodationService.editAccommodationById(
-                id,
-                accommodationDto.getName(),
-                accommodationDto.getCategory(),
-                accommodationDto.getHostId(),
-                accommodationDto.getNumRooms()
-        );
+        return accommodationService.editAccommodationById(id, accommodationDto);
     }
 
     @PostMapping("/occupy/{id}")

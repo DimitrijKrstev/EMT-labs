@@ -1,5 +1,5 @@
 -- data.sql file is used to seed database
-INSERT INTO accommodation (id, name) VALUES (69, 'Negotino');
+INSERT INTO accommodation (id, name, num_rooms) VALUES (69, 'Negotino', 1);
 
 INSERT INTO airbnb_users (id, name, accommodation_id) VALUES (1, 'Dimi', 69);
 
